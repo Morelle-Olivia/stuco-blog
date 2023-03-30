@@ -2,6 +2,7 @@
   "name": "stuco-blog",
   "version": "0.0.0",
   "scripts": {
+    "start:dev": "npx ng serve",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
