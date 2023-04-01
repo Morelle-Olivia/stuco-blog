@@ -1,0 +1,78 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Add gradient border to body element */
+body {
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-right: 40px solid transparent;
+  border-left: 40px solid #ff594d;
+  background-color: white;
+  /* Use linear gradient for left and right borders */
+  border-image: linear-gradient(to bottom, 
+    #0f7ac0 0%,
+    #bcdefc 15%,
+    #fea913 40%,
+    #fe303b 100%) 5;
+}
+
+/* Hero section styles */
+.hero {
+  min-height: 30vh;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  color: black;
+}
+
+.image {
+  min-height: 30vh;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  padding-left: 20rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 4rem;
+  margin-left: 200px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: left;
+}
+
+.button-primary {
+  background-color: #4962ce;
+  color: #fae8ff;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.button-secondary {
+  background-color: #fae8ff;
+  color: #4962ce;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
