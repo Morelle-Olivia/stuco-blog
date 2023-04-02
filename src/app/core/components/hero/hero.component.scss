@@ -21,7 +21,7 @@ body {
 
 /* Hero section styles */
 .hero {
-  min-height: 30vh;
+  min-height: 100vh;
   display: flex;
   justify-content: left;
   align-items: left;
@@ -30,26 +30,25 @@ body {
 }
 
 .image {
-  min-height: 30vh;
-  display: flex;
   justify-content: right;
   align-items: right;
-  padding-left: 20rem;
+  padding-left: 15rem;
+  padding-top: 15rem;
 }
 
 .hero-content {
-  max-width: 800px;
-  padding: 4rem;
+  max-width: 1000px;
+  padding-top: 15rem;
   margin-left: 200px;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
 }
 
@@ -63,7 +62,7 @@ body {
   color: #fae8ff;
   padding: 1rem 2rem;
   border: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
   margin-right: 1rem;
 }
@@ -73,6 +72,6 @@ body {
   color: #4962ce;
   padding: 1rem 2rem;
   border: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
