@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './core/components/home/home.component';
 import {LayoutModule} from "./layout/layout.module";
 import { HeroComponent } from './core/components/hero/hero.component';
+import { MissionComponent } from './core/components/mission/mission.component';
+import { AboutComponent } from './core/components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeroComponent
+    HeroComponent,
+    MissionComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
