@@ -1,0 +1,253 @@
+.image {
+    /* background-image: url('../../../../assets/images/footer.jpg'); */
+    display: block;
+    background-image: url("/assets/images/footer.png");
+    height:06em;
+    background-size:cover;
+     width:95%;
+
+}
+
+.r2 {
+    float: right;
+    margin-right: -280px;
+    font-size: x-large;
+    writing-mode: horizontal-tb;
+    margin-top: 50px !important;
+    color: #3B94AF;
+}
+
+.a1 {
+    color: #3B94AF;
+}
+
+.r21 {
+    margin-left: 25px;
+}
+
+.r24 {
+    margin-left: 25px;
+}
+
+.r23 {
+    margin-left: 25px;
+}
+
+.sentence {
+    margin-top: 50px;
+    float: right;
+    color: rgb(5, 5, 5);
+    font-family: "Courier New", Courier, monospace;
+    margin-right: 300px !important;
+}
+
+@media only screen and (max-width : 375px) {
+    .image {
+            float: left !important;
+    margin-right: 300% !important;
+    width: 400px !important;
+    height: 2em !important;
+    background-size: cover !important;
+    }
+
+    .r2 {
+        margin-right: 95px !important;
+    writing-mode: horizontal-tb;
+    margin-top: -09% !important;
+    font-size: smaller;
+    }
+
+    .sentence {
+        margin-top: 10px !important;
+    float: right !important;
+    color: rgb(5, 5, 5);
+    font-family: "Courier New", Courier, monospace;
+    margin-right: 300px !important;
+    }
+}
+
+@media only screen and (max-width : 414px) {
+    .image {
+            float: left !important;
+    margin-right: 300% !important;
+    width: 400px !important;
+    height: 2em;
+    background-size: cover;
+    }
+
+    .r2 {
+        margin-right: 95px !important;
+    writing-mode: horizontal-tb;
+    margin-top: -09% !important;
+    font-size: smaller;
+    }
+
+    .sentence {
+        margin-top: 10px;
+    float: right;
+    color: rgb(5, 5, 5);
+    font-family: "Courier New", Courier, monospace;
+    margin-right: 300px !important;
+    }
+}
+
+@media only screen and (max-width : 820px) {
+    .image {
+            float: left !important;
+    margin-right: 300% !important;
+    width: 700px !important;
+    height: 60px;
+    background-size: cover;
+    }
+
+    .r2 {
+        margin-right: -280px !important;
+    writing-mode: horizontal-tb;
+    margin-top: 3.5% !important;
+    font-size: smaller;
+    }
+
+    .sentence {
+        margin-top: 10px;
+    float: right;
+    color: rgb(5, 5, 5);
+    font-family: "Courier New", Courier, monospace;
+    margin-right: 200px !important;
+    }
+}
+
+@media only screen and (max-width < 768px) {
+    .image {
+            float: left !important;
+    margin-right: 300% !important;
+    width: 700px !important;
+    height: 60px;
+    background-size: cover;
+    }
+
+    .r2 {
+        margin-right: -290px !important;
+    writing-mode: horizontal-tb;
+    margin-top: 3.5% !important;
+    font-size: smaller;
+    }
+
+    .sentence {
+        margin-top: 10px;
+    float: right;
+    color: rgb(5, 5, 5);
+    font-family: "Courier New", Courier, monospace;
+    margin-right: 200px !important;
+    }
+}
+
+@media only screen and (max-width : 912px) {
+    .image {
+            float: left !important;
+    margin-right: 300% !important;
+    width: 800px !important;
+    height: 60px;
+    background-size: cover;
+    }
+
+    .r2 {
+        margin-right: -260px !important;
+    writing-mode: horizontal-tb;
+    margin-top: 3.5% !important;
+    font-size: smaller;
+    }
+
+    .sentence {
+           margin-top: 10px;
+    float: right;
+    color: rgb(5, 5, 5);
+    font-family: "Courier New", Courier, monospace;
+    margin-right: 200px !important;
+    }
+}
+
+@media only screen and (max-width < 540px) {
+    .image {
+            float: left !important;
+    margin-right: 300% !important;
+    width: 800px !important;
+    height: 60px;
+    background-size: cover;
+    }
+
+    .r2 {
+        margin-right: -200px !important;
+    writing-mode: horizontal-tb;
+    margin-top: 3.5% !important;
+    font-size: smaller;
+    }
+
+    .sentence {
+           margin-top: 10px;
+    float: right;
+    color: rgb(5, 5, 5);
+    font-family: "Courier New", Courier, monospace;
+    margin-right: 200px !important;
+    }
+
+    .r21 {
+    margin-left: 10px;
+    }
+
+    .r24 {
+        margin-left: 10px;
+    }
+
+    .r23 {
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width : 1024px) {
+    .image {
+        float: left !important;
+    margin-right: 300% !important;
+    width: 850px !important;
+    height: 60px;
+    background-size: cover;
+    }
+
+    .r2 {
+        margin-right: -250px !important;
+    writing-mode: horizontal-tb;
+    margin-top: 3.5% !important;
+    font-size: smaller;
+    }
+
+    .sentence {
+        margin-top: 10px;
+    float: right;
+    color: rgb(5, 5, 5);
+    font-family: "Courier New", Courier, monospace;
+    margin-right: 210px !important;
+    }
+}
+
+@media only screen and (max-width < 1280px) {
+    .image {
+        float: left !important;
+    margin-right: 300% !important;
+    height: 90px;
+    background-size: cover;
+    }
+
+    .r2 {
+            margin-right: -250px !important;
+    writing-mode: horizontal-tb;
+    font-size: smaller;
+
+    }
+
+    .sentence {
+            margin-top: 30px;
+    float: right;
+    color: rgb(5, 5, 5);
+    font-family: "Courier New", Courier, monospace;
+    margin-right: 290px !important;
+    }
+}
