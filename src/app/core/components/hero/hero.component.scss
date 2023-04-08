@@ -21,7 +21,7 @@ body {
 
 /* Hero section styles */
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   justify-content: left;
   align-items: left;
@@ -32,24 +32,39 @@ body {
 .image {
   justify-content: right;
   align-items: right;
-  padding-left: 15rem;
-  padding-top: 15rem;
+  padding-left: 12rem;
+  padding-top: 11rem;
 }
 
 .hero-content {
   max-width: 1000px;
-  padding-top: 15rem;
-  margin-left: 200px;
+  padding-top: 10rem;
+  margin-left: 150px;
 }
 
 .hero h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  max-width: 600px;
+  text-align: center;
+}
+
+.red {
+  color: #DF0002;
+}
+
+.green {
+  color: #027F67;
+}
+
+.yellow {
+  color: #F9DF06;
 }
 
 .hero p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-size: 1rem;
+  margin-bottom: 6rem;
+  max-width: 580px;
 }
 
 .button-container {
@@ -58,20 +73,32 @@ body {
 }
 
 .button-primary {
-  background-color: #4962ce;
-  color: #fae8ff;
+  background-color: #3B94AF;
+  color: #DEF7FF;
   padding: 1rem 2rem;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   margin-right: 1rem;
+  border-radius: 0.5rem;
+}
+
+.button-primary:hover {
+  background-color: #DEF7FF;
+  color: #3B94AF;
 }
 
 .button-secondary {
-  background-color: #fae8ff;
-  color: #4962ce;
+  background-color: #DEF7FF;
+  color: #3B94AF;
   padding: 1rem 2rem;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.button-secondary:hover {
+  color: #DEF7FF;
+  background-color: #3B94AF;
 }
