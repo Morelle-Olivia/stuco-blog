@@ -5,7 +5,7 @@ import {AboutComponent} from "./core/components/about/about.component";
 
 const routes: Routes = [
   {
-    path: 'blog',
+    path: 'missions',
     loadChildren: () => import('./blog/blog.module').then(m=>m.BlogModule)
   },
   {

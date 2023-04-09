@@ -3,9 +3,9 @@
       <a href="#" class="logo"><img src="/assets/images/logo.png" alt="logo"><span>GBEEC</span></a>
     </div>
     <ul>
-      <li><a href="#" class="blue">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Missions 2023</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a [routerLink]="['/']" class="blue">Home</a></li>
+      <li><a [routerLink]="['/', 'about']">About</a></li>
+      <li><a [routerLink]="['/', 'missions']">Missions 2023</a></li>
+      <li><a [routerLink]="['/', 'contact']">Contact</a></li>
     </ul>
   </nav>
