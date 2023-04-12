@@ -10,7 +10,7 @@ a {
   display: block;
   color: black;
   text-align: left;
-  padding: 5px;
+  padding: 10px;
   text-decoration: none;
 }
 
@@ -58,5 +58,26 @@ nav ul li a.blue:hover {
 }
 
 a:hover {
+  color: #3B94AF;
+}
+
+.button-container {
+  display: flex;
+  justify-content: left;
+}
+
+.button-primary {
+  background-color: #3B94AF;
+  color: #DEF7FF;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 22rem;
+  border-radius: 0.5rem;
+}
+
+.button-primary:hover {
+  background-color: #DEF7FF;
   color: #3B94AF;
 }
