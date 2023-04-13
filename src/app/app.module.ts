@@ -8,6 +8,7 @@ import {LayoutModule} from "./layout/layout.module";
 import { HeroComponent } from './core/components/hero/hero.component';
 import { MissionComponent } from './core/components/mission/mission.component';
 import { AboutComponent } from './core/components/about/about.component';
+import { ContactComponent } from './core/components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AboutComponent } from './core/components/about/about.component';
     HomeComponent,
     HeroComponent,
     MissionComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
