@@ -1,0 +1,37 @@
+.about_page {
+  padding: 5% 20%;
+}
+.vision {
+  padding: 0% 2%;
+}
+.vision_header {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 48px;
+}
+.body {
+  display: flex;
+  gap: 20%
+}
+.vision_body {
+  width: 780px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13.9px;
+  line-height: 25px;
+  display: flex;
+  text-align: justify;
+}
+.social_media {
+  display: flex;
+  gap: 20px;
+  font-size: x-large;
+  writing-mode: vertical-lr;
+  margin-top: 95px !important;
+}
+.icon {
+  color: #3B94AF;
+}
