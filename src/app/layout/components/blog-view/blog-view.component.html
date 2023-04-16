@@ -1,0 +1,19 @@
+<div *ngIf="data" class="about_page">
+    <img *ngIf="data?.heroImage?.url" class="about_img" [src]="data?.heroImage?.url">
+    <div class="body">
+        <div class="vision">
+            <ng-container *ngFor="let section of data.sections">
+                <h2 [id]="section.id" class="vision_header">{{section.heading}}</h2>
+                <p class="vision_body">
+                    {{section.content}}
+                </p>
+            </ng-container>
+        </div>
+        <div class="social_media">
+            <a class="icon" href="https://movoo-app.deno.dev/movies/popular"><i class="fa fa-instagram"></i></a>
+            <a class="icon" href="https://twitter.com/DongmoToutsop23"><i class="fa fa-twitter"></i></a>
+            <a class="icon" href="https://web.facebook.com/profile.php?id=100010401318217"><i class="fa fa-facebook"></i></a>
+            <a class="icon" href="https://twitter.com/DongmoToutsop23"><i class="fa fa-whatsapp"></i></a>
+        </div>
+    </div>
+</div>

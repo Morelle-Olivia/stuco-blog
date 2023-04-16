@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {Apollo, gql} from "apollo-angular";
+import {Blog} from "../../models/blog.model";
 
 @Component({
   selector: 'app-blog',
@@ -6,10 +9,40 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
+  blog?:Blog;
 
-  constructor() { }
+  constructor(
+      private activatedRoute: ActivatedRoute,
+      private apollo: Apollo
+  ) { }
 
   ngOnInit(): void {
+    this.activatedRoute.paramMap.subscribe(map => {
+      let id = 'clgjfwk2l6trq0buvnqli8ul9' || map.get("id");
+
+
+      this.apollo.watchQuery<any>({
+        query: gql`
+      query blog{
+        blog(where: {id: "${id}"}) {
+    id,
+    title,
+    sections {
+      id,
+      heading,
+      content,
+    },
+    heroImage {
+      url
+    }
+  }
+      }
+      `
+      }).valueChanges.subscribe(data => {
+        this.blog = data?.data?.blog;
+        console.log(this.blog)
+      })
+    })
   }
 
 }

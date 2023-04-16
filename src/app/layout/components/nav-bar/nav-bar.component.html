@@ -1,14 +1,18 @@
-  <nav>
-    <div class="logo-container">
-      <a href="#" class="logo"><img src="/assets/images/logo.png" alt="GBEEC"><span>GBEEC</span></a>
-    </div>
-    <ul>
-      <li><a [routerLink]="['/']" class="blue">Home</a></li>
-      <li><a [routerLink]="['/', 'about']">About</a></li>
-      <li><a [routerLink]="['/', 'missions']">Missions 2023</a></li>
-      <li><a [routerLink]="['/', 'contact']">Contact</a></li>
+<nav>
+    <a href="#" class="logo"><img src="/assets/images/logo.png" alt="GBEEC"></a>
+
+    <ul class="menu-lg">
+        <li><a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="blue" [routerLink]="['/']">Home</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'about']">About</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'missions']">Missions 2023</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'blog']">Blog</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'portfolio']">Portfolio</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'contact']">Contact</a></li>
     </ul>
-    <div class="button-container">
-      <a href="#"><button class="button-primary">Participate</button></a>
-    </div>
-  </nav>
+
+    <app-btn-participate style="margin-left: auto"></app-btn-participate>
+
+    <button class="menu-trigger-sm" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 17h14M5 12h14M5 7h14"/></svg>
+    </button>
+</nav>

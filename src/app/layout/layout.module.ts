@@ -3,10 +3,14 @@ import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {RouterModule} from "@angular/router";
+import {BtnParticipateComponent} from "./components/btn-participate/btn-participate.component";
+import { BlogViewComponent } from './components/blog-view/blog-view.component';
 
 const components = [
   NavBarComponent,
-  FooterComponent
+  FooterComponent,
+    BtnParticipateComponent,
+  BlogViewComponent
 ]
 
 @NgModule({

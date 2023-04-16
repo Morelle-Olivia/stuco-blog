@@ -1,4 +1,4 @@
-<div class="main">
+<div *ngIf="false" class="main">
     <div class="header">
         <div class="title3">
             <p>
@@ -28,4 +28,9 @@
                     l'évangélisation pendant la période des jeux universtaires(JU).
         </div>
     </div>
+</div>
+
+
+<div *ngIf="blog">
+    <blog-view [data]="blog"></blog-view>
 </div>

@@ -1,0 +1,54 @@
+@import "src/app/layout/_utils/breakpoints";
+
+.about_page {
+  padding: 5% 20%;
+
+  @include screen-breakpoint("lt-md") {
+    padding: 1rem;
+  }
+}
+
+.about_img {
+  max-width: 100%;
+  @include screen-breakpoint("lt-md") {
+    width: 100%;
+  }
+}
+
+.vision {
+  padding: 0% 2%;
+}
+.vision_header {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 48px;
+}
+.body {
+  display: flex;
+  gap: 20%;
+
+  @include screen-breakpoint("lt-md") {
+    gap: 2rem;
+  }
+}
+.vision_body {
+  max-width: 780px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13.9px;
+  line-height: 25px;
+  display: flex;
+  text-align: justify;
+}
+.social_media {
+  display: flex;
+  gap: 20px;
+  font-size: x-large;
+  writing-mode: vertical-lr;
+  margin-top: 95px !important;
+}
+.icon {
+  color: #3B94AF;
+}

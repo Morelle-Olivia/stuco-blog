@@ -1,18 +1,17 @@
     <div class="hero">
       <div class="hero-content">
         <h1>
-          <span class="green">STUDENT </span>  
+          <span class="green">STUDENT </span>
           <span class="red"> CONQUEST </span>
           <span class="yellow"> 2023</span>
         </h1>
-        <p>En 1997-1999, les étudiants ont commencé à avoir le sentiment d'une véritable propriété du groupe par le leadership estudiantin. C'est a ce moment-là que les universitaire commençaient à s'investir dans l'évangélisation pendant la période des jeux universitaires (JU).</p>
+        <p class="hero-text">En 1997-1999, les étudiants ont commencé à avoir le sentiment d'une véritable propriété du groupe par le leadership estudiantin. C'est a ce moment-là que les universitaire commençaient à s'investir dans l'évangélisation pendant la période des jeux universitaires (JU).</p>
         <div class="button-container">
-          <a href="#"><button class="button-primary">Participate</button></a>
-          <a href="#"><button class="button-secondary">Learn More</button></a>
+          <app-btn-participate></app-btn-participate>
+          <a [routerLink]="['/', 'about']"><button class="button-secondary">Learn More</button></a>
         </div>
       </div>
-      <div class="image">
-        <img src="/assets/images/hero-image.svg">
-      </div>
+
+        <img class="image" src="/assets/images/hero-image.svg">
     </div>
 

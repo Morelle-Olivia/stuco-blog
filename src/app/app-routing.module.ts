@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from "./core/components/home/home.component";
 import {AboutComponent} from "./core/components/about/about.component";
 import {ContactComponent} from "./core/components/contact/contact.component";
+import {MissionComponent} from "./core/components/mission/mission.component";
+import {PorfolioComponent} from "./core/components/porfolio/porfolio.component";
 
 const routes: Routes = [
   {
-    path: 'missions',
+    path: 'blog',
     loadChildren: () => import('./blog/blog.module').then(m=>m.BlogModule)
   },
   {
@@ -14,8 +16,16 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
+    path: 'missions',
+    component: MissionComponent
+  },
+  {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'portfolio',
+    component: PorfolioComponent
   },
   {
     path: '**',

@@ -1,45 +1,62 @@
+@import "src/app/layout/_utils/breakpoints";
+
 /* Reset default margin and padding */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* Add gradient border to body element */
-body {
-  border-top: 2px solid;
-  border-bottom: 2px solid;
-  border-right: 40px solid transparent;
-  border-left: 40px solid #ff594d;
-  background-color: white;
-  /* Use linear gradient for left and right borders */
-  border-image: linear-gradient(to bottom, 
-    #0f7ac0 0%,
-    #bcdefc 15%,
-    #fea913 40%,
-    #fe303b 100%) 5;
-}
+///* Add gradient border to body element */
+//body {
+//  border-top: 2px solid;
+//  border-bottom: 2px solid;
+//  border-right: 40px solid transparent;
+//  border-left: 40px solid #ff594d;
+//  background-color: white;
+//  /* Use linear gradient for left and right borders */
+//  border-image: linear-gradient(to bottom,
+//    #0f7ac0 0%,
+//    #bcdefc 15%,
+//    #fea913 40%,
+//    #fe303b 100%) 5;
+//}
 
 /* Hero section styles */
 .hero {
   min-height: 90vh;
   display: flex;
   justify-content: left;
-  align-items: left;
+  align-items: center;
   text-align: left;
   color: black;
+  margin: 0 auto;
+  width: fit-content;
+  gap: 10rem;
+
+  @include screen-breakpoint("lt-md") {
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
 }
 
 .image {
-  justify-content: right;
-  align-items: right;
-  padding-left: 25rem;
-  padding-top: 11rem;
+  margin-left: auto;
+ @include screen-breakpoint('lt-md') {
+   height: 18rem;
+   width: 20rem;
+   margin-left: 0;
+ }
 }
 
 .hero-content {
   max-width: 1000px;
-  padding-top: 10rem;
-  margin-left: 150px;
+  padding: 0 2rem;
+
+  @include screen-breakpoint("lt-md") {
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 .hero h1 {
@@ -47,6 +64,12 @@ body {
   margin-bottom: 4rem;
   max-width: 600px;
   text-align: center;
+
+  @include screen-breakpoint("lt-md") {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
 }
 
 .red {
@@ -62,14 +85,27 @@ body {
 }
 
 .hero p {
-  font-size: 1rem;
-  margin-bottom: 6rem;
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
   max-width: 580px;
+  line-height: 1.5;
+  opacity: .9;
+
+  @include screen-breakpoint("lt-md") {
+    max-width: 100%;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .button-container {
   display: flex;
   justify-content: left;
+  gap: 1rem;
+
+  @include screen-breakpoint("lt-md") {
+    justify-content: center;
+  }
 }
 
 .button-primary {

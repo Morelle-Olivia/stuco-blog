@@ -1,9 +1,14 @@
+@import "src/app/layout/_utils/breakpoints";
+
 nav {
   display: flex;
   align-items: center;
-  height: 10px;
-  padding-top: 30px;
-  
+  width: 100%;
+  padding: 0 2rem;
+
+  @include screen-breakpoint("lt-md") {
+    padding: 1rem;
+  }
 }
 
 a {
@@ -14,40 +19,20 @@ a {
   text-decoration: none;
 }
 
-nav .logo-container img {
-  height: 50px;
-  vertical-align: middle;
-  background-color: #eeeeee;
-}
-
-nav .logo-container {
-  margin-right: 20px;
-}
-
-nav .logo {
-  margin-left: 130px;
-  margin-right: 400px;
-  display: inline-block;
-}
-
-nav .logo span {
-  font-size: 1.2em;
-  margin-left: 10px;
-  vertical-align: middle;
-  color: #3B94AF;
-  font-weight: bold;
+.logo img {
+  height: 4rem;
+  width: 4rem;
 }
 
 nav ul {
-  display: inline-block;
-  text-align: center;
+  margin-left: auto;
 }
 
 nav ul li {
   display: inline-block;
-  margin: 0 10px;
+  padding: 0 10px;
+  font-size: 1.2rem;
 }
-
 
 nav ul li a.blue {
   color: #3B94AF;
@@ -61,23 +46,26 @@ a:hover {
   color: #3B94AF;
 }
 
-.button-container {
-  display: flex;
-  justify-content: left;
+.menu-lg {
+  @include screen-breakpoint("lt-md") {
+    display: none !important;
+  }
 }
 
-.button-primary {
-  background-color: #3B94AF;
-  color: #DEF7FF;
-  padding: 1rem 2rem;
-  border: none;
-  font-size: 1rem;
+.menu-trigger-sm {
   cursor: pointer;
-  margin-left: 22rem;
-  border-radius: 0.5rem;
+  background: transparent;
+  margin-left: auto;
+  display: none;
+  border:none;
+  outline: none;
+
+  @include screen-breakpoint("lt-md") {
+    display: block;
+  }
 }
 
-.button-primary:hover {
-  background-color: #DEF7FF;
-  color: #3B94AF;
+.menu-trigger-sm svg {
+  width: 2rem;
+  height: 2rem;
 }
