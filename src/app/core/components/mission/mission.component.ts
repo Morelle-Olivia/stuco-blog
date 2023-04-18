@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
 import {Apollo, gql} from 'apollo-angular';
-import {Blog} from "../../../blog/models/blog.model";
 
 @Component({
     selector: 'app-mission',
@@ -10,7 +9,7 @@ import {Blog} from "../../../blog/models/blog.model";
 })
 export class MissionComponent implements OnInit {
 
-    missions?: Blog
+    missions: any[] = []
 
     constructor(
         private apollo: Apollo
@@ -32,7 +31,15 @@ export class MissionComponent implements OnInit {
       }
       `
         }).valueChanges.subscribe(data => {
-            this.missions = data?.data?.blogs;
+            this.missions = data?.data?.blogs.map((blog: any) => {
+                return {
+                    img: blog.heroImage.url,
+                    content: blog.summary,
+                    title: blog.title,
+                    id: blog.id,
+                    url: ['..', 'blog', blog.id]
+                }
+            });
         })
     }
 

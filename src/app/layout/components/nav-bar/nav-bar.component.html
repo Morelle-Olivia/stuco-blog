@@ -12,7 +12,17 @@
 
     <app-btn-participate style="margin-left: auto"></app-btn-participate>
 
+
     <button class="menu-trigger-sm" >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 17h14M5 12h14M5 7h14"/></svg>
     </button>
+
+    <ul class="menu-sm">
+        <li><a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="blue" [routerLink]="['/']">Home</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'about']">About</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'missions']">Missions 2023</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'blog']">Blog</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'portfolio']">Portfolio</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'contact']">Contact</a></li>
+    </ul>
 </nav>

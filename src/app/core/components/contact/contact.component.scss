@@ -1,44 +1,82 @@
+@import "src/app/layout/_utils/breakpoints";
+
 .contact_page {
   padding: 8% 15%;
-  //display: flex;
   flex-direction: column;
   gap: 50px;
-  font-family: 'Inter';
+
+  width: fit-content;
+  margin: 0 auto;
+
+  @include screen-breakpoint('lt-lg') {
+    padding: 8% 5%;
+  }
 }
 .flex {
   display: flex;
   gap: 170px;
-  align-items: flex-start;
+  align-items: center;
+
+  @include screen-breakpoint('lt-md') {
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+  }
 }
 .card_flex {
-  display: flex;
-  gap: 40px;
+  display: grid;
+  gap: 1.5rem;
   align-items: flex-start;
+  width: fit-content;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 4rem;
+
+  @include screen-breakpoint('lt-lg') {
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 2rem;
+  }
 }
 .notice {
-  width: 495px;
-  height: 120px;
+  max-width: 495px;
 
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
   display: flex;
   text-align: center;
+  line-height: 1.4;
 }
 .jeux_image {
   display: flex;
   align-items: flex-end;
+  height: 15rem;
+  border-radius: .5rem;
+
+  @include screen-breakpoint('lt-lg') {
+    display: none;
+  }
 }
 .contact {
   margin-top: 5%;
-  padding: 2% 5%;
-  width: 400px;
+  padding: 2rem 1rem;
+  width: 28rem;
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
+
+  @include screen-breakpoint('lt-lg') {
+    width: 100%;
+  }
+}
+
+
+.contact> h4 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  opacity: .6;
 }
 .rounded_circle {
-  height: 50px;
-  width: 50px;
+  height: 5rem;
+  width: 5rem;
   border-radius: 1000px;
 }
 .profile_image {
@@ -46,16 +84,37 @@
 }
 .contact_info {
   height: 10%;
-  line-height: 10px;
-  font-size: 12px;
+  line-height: 1.3;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+
+  &  a, & a:link {
+    text-transform: none;
+    text-decoration: none;
+    color: inherit;
+    margin-left: 5px;
+  }
 }
+
 .locality {
-  font-weight: 300;
+  margin-top: .2rem;
 }
 .text_bold {
   font-weight: 600;
 }
 .tel {
-  font-size: 15px;
-  line-height: 15px;
+  margin-top: .1rem;
+}
+
+.card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+* {
+  padding: 0;
+  margin:0;
 }

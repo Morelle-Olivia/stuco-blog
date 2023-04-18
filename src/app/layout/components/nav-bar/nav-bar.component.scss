@@ -5,6 +5,7 @@ nav {
   align-items: center;
   width: 100%;
   padding: 0 2rem;
+  position: relative;
 
   @include screen-breakpoint("lt-md") {
     padding: 1rem;
@@ -68,4 +69,17 @@ a:hover {
 .menu-trigger-sm svg {
   width: 2rem;
   height: 2rem;
+}
+
+.menu-trigger-sm:hover + .menu-sm{
+  display: flex;
+}
+
+.menu-sm {
+  top: 90%;
+  position: absolute;
+  right: 0;
+  display: none;
+  background-color: white;
+  flex-direction: column;
 }

@@ -9,6 +9,7 @@ import {GalleryItem} from "../../../blog/models/gallery-item.model";
 })
 export class PorfolioComponent implements OnInit {
   images?: GalleryItem[] = []
+  preview?:any = null;
 
   constructor(
       private apollo: Apollo
@@ -32,4 +33,7 @@ export class PorfolioComponent implements OnInit {
     })
   }
 
+  showPreview(url: any) {
+    this.preview = url;
+  }
 }

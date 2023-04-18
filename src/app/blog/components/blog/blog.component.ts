@@ -18,7 +18,7 @@ export class BlogComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(map => {
-      let id = 'clgjfwk2l6trq0buvnqli8ul9' || map.get("id");
+      let id = map.get("id");
 
 
       this.apollo.watchQuery<any>({
@@ -40,7 +40,6 @@ export class BlogComponent implements OnInit {
       `
       }).valueChanges.subscribe(data => {
         this.blog = data?.data?.blog;
-        console.log(this.blog)
       })
     })
   }

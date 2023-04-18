@@ -8,7 +8,7 @@ import {Blog} from "../../models/blog.model";
   styleUrls: ['./blogs.component.scss']
 })
 export class BlogsComponent implements OnInit {
-  blogs?: Blog;
+  blogs: any[] = [];
 
   constructor(private apollo: Apollo) { }
 
@@ -27,7 +27,15 @@ export class BlogsComponent implements OnInit {
       }
       `
     }).valueChanges.subscribe(data => {
-      this.blogs = data?.data?.blogs;
+      this.blogs = data?.data?.blogs.map((blog: any) => {
+        return {
+          id: blog.id,
+          title: blog.title,
+          content: blog.summary,
+          image: blog.heroImage?.url,
+          url : ['.', blog.id]
+        }
+      });
     })
   }
 
