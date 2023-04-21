@@ -6,6 +6,7 @@ import {RouterModule} from "@angular/router";
 import {BtnParticipateComponent} from "./components/btn-participate/btn-participate.component";
 import { BlogViewComponent } from './components/blog-view/blog-view.component';
 import { CardsViewComponent } from './components/cards-view/cards-view.component';
+import {TranslateModule} from "../translate/translate.module";
 
 const components = [
   NavBarComponent,
@@ -25,7 +26,8 @@ const components = [
   ],
   imports: [
     CommonModule,
-      RouterModule
+      RouterModule,
+      TranslateModule
   ]
 })
 export class LayoutModule { }

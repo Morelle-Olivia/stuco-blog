@@ -12,6 +12,7 @@ import {ContactComponent} from './core/components/contact/contact.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PorfolioComponent } from './core/components/porfolio/porfolio.component';
+import {TranslateModule} from "./translate/translate.module";
 
 @NgModule({
     declarations: [
@@ -28,7 +29,8 @@ import { PorfolioComponent } from './core/components/porfolio/porfolio.component
         AppRoutingModule,
         LayoutModule,
         GraphQLModule,
-        HttpClientModule
+        HttpClientModule,
+        TranslateModule
     ],
     providers: [],
     exports: [

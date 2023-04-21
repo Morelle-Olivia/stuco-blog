@@ -27,6 +27,8 @@ export class BlogComponent implements OnInit {
         blog(where: {id: "${id}"}) {
     id,
     title,
+    createdAt,
+    author {name},
     sections {
       id,
       heading,
@@ -42,6 +44,9 @@ export class BlogComponent implements OnInit {
         this.blog = data?.data?.blog;
       })
     })
+
   }
+
+
 
 }

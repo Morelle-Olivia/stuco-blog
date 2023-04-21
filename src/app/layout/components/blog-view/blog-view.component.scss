@@ -1,14 +1,19 @@
 @import "src/app/layout/_utils/breakpoints";
 
-.about_page {
+.blog {
   padding: 5% 20%;
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+  }
 
   @include screen-breakpoint("lt-md") {
     padding: 1rem;
   }
 }
 
-.about_img {
+.blog__img {
   max-width: 100%;
   @include screen-breakpoint("lt-md") {
     width: 100%;
@@ -19,7 +24,6 @@
   padding: 0% 2%;
 }
 .vision_header {
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -51,4 +55,35 @@
 }
 .icon {
   color: #3B94AF;
+}
+
+.metas {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.1rem;
+  opacity: .7;
+
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    @include screen-breakpoint("lt-md") {
+      flex-direction: column;
+    }
+
+    &-data {
+      font-weight: 200;
+      opacity: .8;
+      text-align: center;
+    }
+  }
+
+  @include screen-breakpoint("lt-md") {
+    flex-direction: column;
+    gap: 1.4rem;
+  }
 }

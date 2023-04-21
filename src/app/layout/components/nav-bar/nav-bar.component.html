@@ -2,12 +2,12 @@
     <a href="#" class="logo"><img src="/assets/images/logo.png" alt="GBEEC"></a>
 
     <ul class="menu-lg">
-        <li><a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="blue" [routerLink]="['/']">Home</a></li>
-        <li><a routerLinkActive="blue" [routerLink]="['/', 'about']">About</a></li>
-        <li><a routerLinkActive="blue" [routerLink]="['/', 'missions']">Missions 2023</a></li>
-        <li><a routerLinkActive="blue" [routerLink]="['/', 'blog']">Blog</a></li>
-        <li><a routerLinkActive="blue" [routerLink]="['/', 'portfolio']">Portfolio</a></li>
-        <li><a routerLinkActive="blue" [routerLink]="['/', 'contact']">Contact</a></li>
+        <li><a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="blue" [routerLink]="['/']">{{"HOME" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'about']">{{'ABOUT' | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'missions']">{{"MISSIONS_2023" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'blog']">{{"BLOG" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'portfolio']">{{"PORTFOLIO" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'contact']">{{"CONTACT" | i18n}}</a></li>
     </ul>
 
     <app-btn-participate style="margin-left: auto"></app-btn-participate>
@@ -18,11 +18,11 @@
     </button>
 
     <ul class="menu-sm">
-        <li><a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="blue" [routerLink]="['/']">Home</a></li>
-        <li><a routerLinkActive="blue" [routerLink]="['/', 'about']">About</a></li>
-        <li><a routerLinkActive="blue" [routerLink]="['/', 'missions']">Missions 2023</a></li>
-        <li><a routerLinkActive="blue" [routerLink]="['/', 'blog']">Blog</a></li>
-        <li><a routerLinkActive="blue" [routerLink]="['/', 'portfolio']">Portfolio</a></li>
-        <li><a routerLinkActive="blue" [routerLink]="['/', 'contact']">Contact</a></li>
+        <li><a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="blue" [routerLink]="['/']">{{"HOME" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'about']">{{'ABOUT' | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'missions']">{{"MISSIONS_2023" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'blog']">{{"BLOG" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'portfolio']">{{"PORTFOLIO" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'contact']">{{"CONTACT" | i18n}}</a></li>
     </ul>
 </nav>

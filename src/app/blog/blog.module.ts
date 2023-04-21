@@ -4,6 +4,7 @@ import { BlogRoutingModule } from './blog-routing.module';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { BlogComponent } from './components/blog/blog.component';
 import {LayoutModule} from "../layout/layout.module";
+import {TranslateModule} from "../translate/translate.module";
 
 
 
@@ -15,7 +16,8 @@ import {LayoutModule} from "../layout/layout.module";
     imports: [
         CommonModule,
         BlogRoutingModule,
-        LayoutModule
+        LayoutModule,
+        TranslateModule
     ]
 })
 export class BlogModule { }

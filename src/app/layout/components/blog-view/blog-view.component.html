@@ -1,5 +1,12 @@
-<div *ngIf="data" class="about_page">
-    <img *ngIf="data?.heroImage?.url" class="about_img" [src]="data?.heroImage?.url">
+<div *ngIf="data" class="blog">
+    <h1 class="blog__title">{{data.title}}</h1>
+    <div *ngIf="data.author && data.createdAt" class="metas">
+        <div class="meta"><i class="fa fa-user"></i><span class="meta-data">{{"BY"| i18n}} {{data.author.name}}</span></div>
+        <div class="meta"><i class="fa fa-calendar"></i><span class="meta-data">{{data.createdAt | date : 'full'}}</span></div>
+    </div>
+
+    <img *ngIf="data?.heroImage?.url" class="blog__img" [src]="data?.heroImage?.url">
+
     <div class="body">
         <div class="vision">
             <ng-container *ngFor="let section of data.sections">
