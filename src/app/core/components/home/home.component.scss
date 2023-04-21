@@ -1,0 +1,52 @@
+@import "src/app/layout/_utils/breakpoints";
+#learn_more {
+  font-size: 2rem;
+}
+
+.statistics {
+  margin: 10rem auto 20rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 50rem;
+  padding: 1rem;
+
+  @include screen-breakpoint("lt-md") {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include screen-breakpoint("lt-md") {
+      flex: none;
+    }
+
+    &-icon {
+      font-size: 4rem;
+      width: 7rem;
+      height: 7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      //border: .6rem solid rgb(59, 148, 175) ;
+      color: rgb(59, 148, 175);
+      background-color: rgb(222, 255, 255);
+    }
+
+    &-value {
+      font-weight: bold;
+      font-size: 3rem;
+      margin-top: 1rem;
+    }
+
+    &-label {
+      font-size: 1.2rem;
+    }
+  }
+}

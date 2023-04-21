@@ -1,8 +1,7 @@
 <div class="contact_page">
     <div class="flex">
         <p class="notice">
-            Pour toutes vos réactions, vous pouvez vous référer aux adresses des membres du
-            Bureau National des Etudiants (BNE) suivantes.
+            {{"CONTACT_GUIDE" | i18n}}
         </p>
         <img src="assets/images/jeuxU.svg" class="jeux_image">
     </div>
@@ -13,7 +12,7 @@
                 <img src="{{contact.avatar || 'assets/images/avatar.png'}}" alt="{{contact.name}}" class="rounded_circle">
                 <div class="contact_info">
                     <h3 class="text_bold">{{contact.role}}</h3>
-                    <p class="locality">{{contact.address}}</p>
+                    <p class="locality">{{'LOCALITY_OF' | i18n}} {{contact.address}}</p>
                     <div class="text_bold tel iconed"><i class="fa fa-address-book-o"><a *ngFor="let phone of contact.phones; let i=index" href="{{phone.url}}">{{phone.phone}} <span *ngIf="i<contact.phones.length-1">/</span></a></i></div>
                     <div class="iconed" *ngIf="contact.email"><i class="fa fa-envelope-o"></i><a href="{{'mailto://'+contact.email}}">{{contact.email}}</a></div>
                 </div>

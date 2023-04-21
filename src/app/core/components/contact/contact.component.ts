@@ -9,7 +9,7 @@ export class ContactComponent implements OnInit {
   readonly contacts: any[] = [
     {
       name: 'Ngouleu Tertulien',
-      address: 'Locality of Buea',
+      address: 'Buea',
       email: 'ngouleutert1@gmail.com',
       avatar: null,
       phones: [
