@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 import {Apollo, gql} from 'apollo-angular';
+import {I18nService} from "../../../translate/translate/i18n.service";
 
 @Component({
     selector: 'app-mission',
@@ -9,18 +10,21 @@ import {Apollo, gql} from 'apollo-angular';
 })
 export class MissionComponent implements OnInit {
 
-    missions: any[] = []
+    missions: any[] = [];
+    locale = 'fr';
 
     constructor(
-        private apollo: Apollo
+        private apollo: Apollo,
+        private _i18n: I18nService
     ) {
     }
 
     ngOnInit(): void {
+        this.locale = this._i18n.getCurrentLanguage().id;
         this.apollo.watchQuery<any>({
             query: gql`
       {
-        blogs(where: {isMission: true}) {
+        blogs(where: {isMission: true}, locales:[${this.locale}) {
         id,
         title,
         summary,

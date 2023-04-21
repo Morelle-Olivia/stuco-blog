@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Apollo, gql} from "apollo-angular";
 import {Blog} from "../../../blog/models/blog.model";
+import {I18nService} from "../../../translate/translate/i18n.service";
 
 @Component({
   selector: 'app-about',
@@ -9,17 +10,21 @@ import {Blog} from "../../../blog/models/blog.model";
 })
 export class AboutComponent implements OnInit {
   blog?:Blog;
+  locale = 'fr';
 
   constructor(
-      private apollo: Apollo
+      private apollo: Apollo,
+      private _i18n: I18nService
   ) { }
 
   ngOnInit(): void {
+    this.locale = this._i18n.getCurrentLanguage().id;
+
     this.apollo.watchQuery<any>({
       fetchPolicy: 'no-cache',
       query: gql`
       {
-        blogs(where: {isAbout: true}, first:1) {
+        blogs(where: {isAbout: true}, first:1, locales:[${this.locale}]) {
         id,
         title,
         sections {

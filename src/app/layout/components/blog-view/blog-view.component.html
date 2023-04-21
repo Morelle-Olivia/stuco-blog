@@ -5,7 +5,7 @@
         <div class="meta"><i class="fa fa-calendar"></i><span class="meta-data">{{data.createdAt | date : 'full'}}</span></div>
     </div>
 
-    <img *ngIf="data?.heroImage?.url" class="blog__img" [src]="data?.heroImage?.url">
+    <img *ngIf="data?.heroImage?.url" class="blog__img" [src]="data.heroImage.url">
 
     <div class="body">
         <div class="vision">
@@ -18,7 +18,6 @@
         </div>
         <div class="social_media">
             <a class="icon" href="https://www.instagram.com/gbeecunational/"><i class="fa fa-instagram"></i></a>
-<!--            <a class="icon" href="https://twitter.com/DongmoToutsop23"><i class="fa fa-twitter"></i></a>-->
             <a class="icon" href="https://www.facebook.com/gbeecnational"><i class="fa fa-facebook"></i></a>
             <a class="icon" href="https://wa.me/237672243165"><i class="fa fa-whatsapp"></i></a>
         </div>
