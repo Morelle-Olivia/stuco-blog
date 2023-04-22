@@ -54,6 +54,8 @@ a:hover {
 }
 
 .menu-trigger-sm {
+  position: relative;
+  z-index: 10;
   cursor: pointer;
   background: transparent;
   margin-left: auto;
@@ -71,15 +73,38 @@ a:hover {
   height: 2rem;
 }
 
-.menu-trigger-sm:hover + .menu-sm{
-  display: flex;
-}
-
 .menu-sm {
-  top: 90%;
+  z-index: 10;
+  top: 20%;
   position: absolute;
   right: 0;
   display: none;
   background-color: white;
   flex-direction: column;
+}
+
+.language-switch {
+  margin-left: .5rem;
+}
+
+.menu-back-drop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .1);
+  height: 100vh;
+  width: 100%;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .menu-sm {
+  display: flex;
+}
+
+#menu-toggle:checked ~ .menu-back-drop {
+  display: block;
 }

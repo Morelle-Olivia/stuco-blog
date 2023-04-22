@@ -1,29 +1,27 @@
 <div>
     <hero-section></hero-section>
 
-    <div *ngIf="false" id="learn_more">
-        <h1 >More about STUCO</h1>
+    <div id="learn_more">
+        <h1>{{"MORE_ABOUT_STUCO" | i18n}}</h1>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at debitis delectus et rem? Accusantium dolorum eaque iusto maxime necessitatibus obcaecati, porro quaerat qui, reprehenderit sit soluta veniam voluptatem. Laboriosam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at debitis delectus et rem? Accusantium dolorum eaque iusto maxime necessitatibus obcaecati, porro quaerat qui, reprehenderit sit soluta veniam voluptatem. Laboriosam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at debitis delectus et rem? Accusantium dolorum eaque iusto maxime necessitatibus obcaecati, porro quaerat qui, reprehenderit sit soluta veniam voluptatem. Laboriosam.
+            {{"BRIEF_HISTORY_2" | i18n}}
         </p>
     </div>
 
     <div class="statistics">
         <div class="group">
-            <i class="group-icon fa fa-facebook"></i>
-            <span class="group-value">+{{30}}</span>
+            <i class="group-icon fa fa-trophy"></i>
+            <span class="group-value">+{{stats.conquerors}}</span>
             <span class="group-label">Conquerors</span>
         </div>
         <div class="group">
-            <i class="group-icon fa fa-facebook"></i>
-            <span class="group-value">+{{30}}</span>
+            <i class="group-icon fa fa-bullhorn"></i>
+            <span class="group-value">+{{stats.evangelized}}</span>
             <span class="group-label">Persons evangelised to</span>
         </div>
         <div class="group">
-            <i class="group-icon fa fa-facebook"></i>
-            <span class="group-value">+{{30}}</span>
+            <i class="group-icon  fa fa-users"></i>
+            <span class="group-value">+{{stats.followed}}</span>
             <span class="group-label">Persons followed up</span>
         </div>
     </div>

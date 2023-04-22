@@ -1,3 +1,5 @@
+@import "src/app/layout/_utils/breakpoints";
+
 .button-container {
   position: relative;
 }
@@ -16,6 +18,10 @@ a:link {
   cursor: pointer;
   margin-left: auto;
   border-radius: 0.5rem;
+
+  @include screen-breakpoint("lt-md") {
+    padding: .8rem 1rem;
+  }
 }
 
 .button-primary:hover {

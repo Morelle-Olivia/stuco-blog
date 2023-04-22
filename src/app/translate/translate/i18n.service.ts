@@ -43,10 +43,11 @@ export class I18nService {
   }
 
   useLanguage(language: any): void {
-    if (this.currentLanguage.id !== language.id) {
-      this.currentLanguage = language;
+    if (this.currentLanguage.id !== language) {
 
-      localStorage.setItem(CURRENT_LANGUAGE_STORE_KEY, JSON.stringify(language));
+      this.currentLanguage = this.supportedLanguages.find(l => l.id = language);
+
+      localStorage.setItem(CURRENT_LANGUAGE_STORE_KEY, language);
 
       location.reload();
     }
@@ -54,10 +55,10 @@ export class I18nService {
 
   getMessages(): Promise<{}> {
     let currentLanguage = localStorage.getItem(CURRENT_LANGUAGE_STORE_KEY);
-    if (currentLanguage) {
-      this.currentLanguage = JSON.parse(currentLanguage);
-    }
 
+    if (currentLanguage) {
+      this.currentLanguage = this.supportedLanguages.find(l => l.id==currentLanguage);
+    }
     const jsonLocation = `/assets/locales/${this.currentLanguage.id}.json`;
 
     return new Promise<{}>((resolve, reject) => {

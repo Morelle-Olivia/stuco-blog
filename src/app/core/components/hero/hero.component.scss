@@ -6,21 +6,6 @@
   padding: 0;
 }
 
-///* Add gradient border to body element */
-//body {
-//  border-top: 2px solid;
-//  border-bottom: 2px solid;
-//  border-right: 40px solid transparent;
-//  border-left: 40px solid #ff594d;
-//  background-color: white;
-//  /* Use linear gradient for left and right borders */
-//  border-image: linear-gradient(to bottom,
-//    #0f7ac0 0%,
-//    #bcdefc 15%,
-//    #fea913 40%,
-//    #fe303b 100%) 5;
-//}
-
 /* Hero section styles */
 .hero {
   min-height: 90vh;
@@ -54,6 +39,7 @@
   padding: 0 2rem;
 
   @include screen-breakpoint("lt-md") {
+    padding: 0 1rem;
     max-width: 100%;
     text-align: center;
   }
@@ -93,14 +79,16 @@
 
   @include screen-breakpoint("lt-md") {
     max-width: 100%;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
+    line-height: 1.6;
   }
 }
 
 .button-container {
   display: flex;
   justify-content: left;
+  align-items: center;
   gap: 1rem;
 
   @include screen-breakpoint("lt-md") {
