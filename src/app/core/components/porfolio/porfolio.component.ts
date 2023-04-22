@@ -26,7 +26,7 @@ export class PorfolioComponent implements OnInit {
         portfolios(locales: [${this.locale}]) {
     id,
     caption,
-    image {
+    image(locales:[en]) {
       url
     }}
       }

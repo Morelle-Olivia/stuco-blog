@@ -24,7 +24,7 @@ export class MissionComponent implements OnInit {
         this.apollo.watchQuery<any>({
             query: gql`
       {
-        blogs(where: {isMission: true}, locales:[${this.locale}) {
+        blogs(where: {isMission: true}, locales:[${this.locale}]) {
         id,
         title,
         summary,
