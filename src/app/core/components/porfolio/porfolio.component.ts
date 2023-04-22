@@ -33,7 +33,6 @@ export class PorfolioComponent implements OnInit {
       `
     }).valueChanges.subscribe(data => {
       this.images = data?.data?.portfolios;
-      console.log(this.images)
     })
   }
 
