@@ -37,6 +37,7 @@ export class BlogComponent implements OnInit {
       id,
       heading,
       content,
+      point
     },
     heroImage {
       url

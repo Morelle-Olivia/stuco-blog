@@ -2,7 +2,7 @@
     <h1 class="blog__title">{{data.title}}</h1>
     <div *ngIf="data.author && data.createdAt" class="metas">
         <div class="meta"><i class="fa fa-user"></i><span class="meta-data">{{"BY"| i18n}} {{data.author.name}}</span></div>
-        <div class="meta"><i class="fa fa-calendar"></i><span class="meta-data">{{data.createdAt | date : 'full'}}</span></div>
+        <div class="meta"><i class="fa fa-calendar"></i><span class="meta-data">{{data.createdAt | date : 'medium': 'UTC+1'}} (WAT)</span></div>
     </div>
 
     <img *ngIf="data?.heroImage?.url" class="blog__img" [src]="data.heroImage.url">
@@ -14,6 +14,9 @@
                 <p class="vision_body">
                     {{section.content}}
                 </p>
+                <ul *ngIf="section.point">
+                    <li *ngFor="let point of section.point">{{point}}</li>
+                </ul>
             </ng-container>
         </div>
         <div class="social_media">

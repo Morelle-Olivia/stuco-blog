@@ -37,7 +37,7 @@ export class BlogsComponent implements OnInit {
                     id: blog.id,
                     title: blog.title,
                     content: blog.summary,
-                    image: blog.heroImage?.url,
+                    img: blog.heroImage?.url,
                     url: ['.', blog.id]
                 }
             });
