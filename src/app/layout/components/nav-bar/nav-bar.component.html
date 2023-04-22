@@ -1,1 +1,35 @@
-<p>nav-bar works!</p>
+<nav>
+    <a href="#" class="logo"><img src="/assets/images/logo.png" alt="GBEEC"></a>
+
+    <ul class="menu-lg">
+        <li><a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="blue" [routerLink]="['/']">{{"HOME" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'about']">{{'ABOUT' | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'missions']">{{"MISSIONS_2023" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'blog']">{{"BLOG" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'portfolio']">{{"PORTFOLIO" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'contact']">{{"CONTACT" | i18n}}</a></li>
+    </ul>
+
+    <app-btn-participate style="margin-left: auto"></app-btn-participate>
+
+    <input #menuToggle id="menu-toggle" type="checkbox">
+    <label for="menu-toggle" class="menu-trigger-sm" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 17h14M5 12h14M5 7h14"/></svg>
+    </label>
+
+    <select class="language-switch" (change)="switchLanguage($event)">
+        <option [selected]="lang === 'fr'" value="fr">Français</option>
+        <option [selected]="lang === 'en'" value="en">English</option>
+    </select>
+
+    <ul (click)="closeMenu()" class="menu-sm">
+        <li><a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="blue" [routerLink]="['/']">{{"HOME" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'about']">{{'ABOUT' | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'missions']">{{"MISSIONS_2023" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'blog']">{{"BLOG" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'portfolio']">{{"PORTFOLIO" | i18n}}</a></li>
+        <li><a routerLinkActive="blue" [routerLink]="['/', 'contact']">{{"CONTACT" | i18n}}</a></li>
+    </ul>
+
+    <div (click)="closeMenu()" class="menu-back-drop"></div>
+</nav>

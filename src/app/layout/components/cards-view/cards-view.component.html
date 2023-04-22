@@ -1,0 +1,9 @@
+<div *ngIf="cards" class="container">
+    <a [routerLink]="card.url" *ngFor="let card of cards" class="item">
+        <img class="item__image" [src]="card.img" alt="jeux_image">
+        <h3>{{card.title}}</h3>
+        <p>
+            {{card.content}}
+        </p>
+    </a>
+</div>

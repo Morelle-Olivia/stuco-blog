@@ -1,1 +1,17 @@
-<p>hero works!</p>
+    <div class="hero">
+      <div class="hero-content">
+        <h1>
+          <span class="green">STUDENT </span>
+          <span class="red"> CONQUEST </span>
+          <span class="yellow"> 2023</span>
+        </h1>
+        <p class="hero-text">{{"BRIEF_HISTORY" | i18n}}</p>
+        <div class="button-container">
+          <app-btn-participate></app-btn-participate>
+          <a [routerLink]="['.']" fragment="learn_more"><button class="button-secondary">{{"LEARN_MORE" | i18n}}</button></a>
+        </div>
+      </div>
+
+        <img class="image" src="/assets/images/hero-image.svg">
+    </div>
+

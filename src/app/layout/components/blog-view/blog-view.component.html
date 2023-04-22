@@ -1,0 +1,28 @@
+<div *ngIf="data" class="blog">
+    <h1 class="blog__title">{{data.title}}</h1>
+    <div *ngIf="data.author && data.createdAt" class="metas">
+        <div class="meta"><i class="fa fa-user"></i><span class="meta-data">{{"BY"| i18n}} {{data.author.name}}</span></div>
+        <div class="meta"><i class="fa fa-calendar"></i><span class="meta-data">{{data.createdAt | date : 'medium': 'UTC+1'}}</span></div>
+    </div>
+
+    <img *ngIf="data?.heroImage?.url" class="blog__img" [src]="data.heroImage.url">
+
+    <div class="body">
+        <div class="vision">
+            <ng-container *ngFor="let section of data.sections">
+                <h2 [id]="section.id" class="vision_header">{{section.heading}}</h2>
+                <p class="vision_body">
+                    {{section.content}}
+                </p>
+                <ul *ngIf="section.point">
+                    <li *ngFor="let point of section.point">{{point}}</li>
+                </ul>
+            </ng-container>
+        </div>
+        <div class="social_media">
+            <a class="icon" href="https://www.instagram.com/gbeecunational/"><i class="fa fa-instagram"></i></a>
+            <a class="icon" href="https://www.facebook.com/gbeecnational"><i class="fa fa-facebook"></i></a>
+            <a class="icon" href="https://wa.me/237672243165"><i class="fa fa-whatsapp"></i></a>
+        </div>
+    </div>
+</div>
